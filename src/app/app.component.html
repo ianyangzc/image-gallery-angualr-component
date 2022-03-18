@@ -1,10 +1,52 @@
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * The content below * * * * * * * * * * * -->
-<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
-<!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * Delete the template below * * * * * * * * * * -->
-<!-- * * * * * * * to get started with your project! * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<router-outlet></router-outlet>
-<app-gallery></app-gallery>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Project #2 - Device Development 1.0</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="container">
+  <h2>Image Gallery</h2>
+  <h3>Ian Yang / 101373444</h3>
+  <h4>Image {{ (indexOfImage + 1) +  "/" + picsArray.length}}</h4>
+  <div class="row">
+    <div class="col-md-1"><button class="pull-right" (click)="previousImage();">< Go Back</button></div> <div class="col-md-10">
+      <div class="thumbnail">
+          <img [src]="picsArray[indexOfImage]"  class="img-thumbnail" alt="beach" style="width:100%">
+          <div class="caption">
+            <p>{{(indexOfIntro+1)+"."+introArray[indexOfIntro]}}</p>
+          </div>
+      </div>
+    </div>
+ <button class="col-md-1" (click)="nextImage();"> Go Forward > </button>
+  </div>
+</div>
+  <div class="row">
+  <div class="col-md-1"></div>
+        <div class="col-md-10">
+
+          <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-1"><img [src]="picsArray[indexOfImage+3]"   class="img-thumbnail" alt="Lights"></div>
+            <div class="col-md-1"><img [src]="picsArray[indexOfImage+2]"   class="img-thumbnail" alt="Lights"></div>
+            <div class="col-md-1"><img [src]="picsArray[indexOfImage+1]"   class="img-thumbnail" alt="Lights"></div>
+            <div class="col-md-1"><img [src]="picsArray[indexOfImage]"   class="img-thumbnail" alt="Lights"></div>
+            <div class="col-md-1"><img [src]="picsArray[indexOfImage-1]"   class="img-thumbnail" alt="Lights"></div>
+            <div class="col-md-1"><img [src]="picsArray[indexOfImage-2]"   class="img-thumbnail" alt="Lights"></div>
+            <div class="col-md-1"><img [src]="picsArray[indexOfImage-3]"   class="img-thumbnail" alt="Lights"></div>
+            <div class="col-md-1"><img [src]="picsArray[indexOfImage]"   class="img-thumbnail" alt="Lights"></div>
+            <div class="col-md-1"><img [src]="picsArray[indexOfImage+1]"   class="img-thumbnail" alt="Lights"></div>
+             <div class="col-md-1"><img [src]="picsArray[indexOfImage+2]"   class="img-thumbnail" alt="Lights"></div>
+              <div class="col-md-1"></div>
+          </div>
+        </div>
+  <div class="col-md-1"></div>
+  </div>
+</body>
+</html>
+
+
